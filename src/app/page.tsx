@@ -1,10 +1,18 @@
 "use client";
+import "regenerator-runtime/runtime";
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { ChangeEvent,useState } from 'react';
 import TextArea from '../components/inputs/TextArea'
+import SpeechRecognitionComponent from '../components/SpeechRecognition/SpeechRecognitionComponent';
+import { IconVolume } from "@tabler/icons-react";
 export default function Home() {
 
   const [sourceText, setSourceText] = useState<string>("")
+
+  const  handleAudioPlayBack =(sourceText: string)=>{
+   const audio = new SpeechSynthesisUtterance(sourceText);
+   window.speechSynthesis.speak(audio);
+  }
 
   return (
    <>
@@ -31,7 +39,8 @@ export default function Home() {
                  />
                  <div className='flex flex-row justify-between w-full'>
                   <span className='curser-pointer flex space-x-2 flex-row'>
-                  
+                   <SpeechRecognitionComponent setSourceText={setSourceText}/>
+                   <IconVolume size={22} onClick={()=>handleAudioPlayBack(sourceText)}/>
                   </span>
                  </div>
                   </div>
