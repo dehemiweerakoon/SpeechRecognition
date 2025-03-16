@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Language Translator App
 
-## Getting Started
+This is a Next.js-based language translator app that uses the Gemini API for text translation and the Web Speech API for speech recognition and synthesis.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🎤 Speech Recognition: Convert spoken words into text.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🌍 Language Translation: Translate text into selected languages using Gemini API.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔊 Speech Synthesis: Read out the translated text.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🎨 User-friendly UI: Simple and clean interface with language selection.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+  -Next.js (React Framework)
+  
+  -Gemini API (Translation)
+  
+  -Web Speech API (Speech Recognition & Synthesis)
+  
+  -Tailwind CSS (Styling)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation & Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  1️⃣ Clone the Repository
 
-## Deploy on Vercel
+  ```
+  git clone https://github.com/yourusername/translator-app.git
+  cd translator-app
+  ```
+  
+  2️⃣ Install Dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ```
+  npm install
+  ```
+  
+  3️⃣ Set Up Environment Variables
+  
+  Create a .env.local file in the root directory and add your Gemini API key:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  ```
+      NEXT_PUBLIC_API_KEY=your-api-key-here
+  ```
+  
+  4️⃣ Run the App
+
+  ```
+  npm run dev
+  ```
+
+**The app will be available at http://localhost:3000**
+
+## Usage
+
+-Click on the "🎤 Speak" button and start speaking.
+
+-The recognized text will appear in the text box.
+
+-Select the target language from the dropdown.
+
+-Click "🔁 Translate" to translate the text.
+
+-Click "🔊 Listen" to hear the translation.
+
+
+## Deployment
+
+To deploy on Vercel, run:
+  ```
+   npm run build
+  ```
+
+
+## Future Improvements
+
+    Support for more languages
+    
+    Enhanced UI/UX
+    
+    Offline translation support
+
