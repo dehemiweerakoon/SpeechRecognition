@@ -16,7 +16,7 @@ const Home: React.FC = () => {
   const [sourceText, setSourceText] = useState<string>("");
   const [copied, setCopied] = useState<boolean>(false);
   const [favorite, setFavorite] = useState<boolean>(false);
-  const [languages] = useState<string[]>(["Russian", "French", "Spanish", "Sinhala", "Italian", "German", "Japanese", "Chinese", "Korean", "Arabic"])
+  const [languages] = useState<string[]>(["Russian", "English","French", "Spanish", "Sinhala", "Italian", "German", "Japanese", "Chinese", "Korean", "Arabic"])
   const [selectedLanguage, setSelectedLanguage] = useState<string>("Sinhala");
   const targetText = useTranslate(sourceText, selectedLanguage);
 
@@ -31,6 +31,7 @@ const Home: React.FC = () => {
     "Chinese": "zh-CN",
     "Korean": "ko-KR",
     "Arabic": "ar-SA",
+    "English": "en-US",
   };
 
   const handleAudioPlayBack = (sourceText: string) => {
