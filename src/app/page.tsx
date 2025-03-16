@@ -81,7 +81,7 @@ const Home: React.FC = () => {
           <div className="max-w-[85rem] mx-auto px-4 sm:px-6 py-10 sm:py-24">
             <div className="text-center">
               <h1 className="text-3xl sm:text-6xl font-bold">
-                <span className="text-blue-900">Grammar</span>
+                <span className="text-blue-200">Grammar </span>
                 <span className="text-blue-400">Speaker</span>
               </h1>
               <p className="mt-1 text-neutral-500">
