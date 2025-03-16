@@ -31,12 +31,16 @@ const Home: React.FC = () => {
     "Chinese": "zh-CN",
     "Korean": "ko-KR",
     "Arabic": "ar-SA",
-    "English": "en-US",
   };
 
   const handleAudioPlayBack = (sourceText: string) => {
     const audio = new SpeechSynthesisUtterance(sourceText);
-    audio.lang = languageMap[selectedLanguage];
+    
+     if(languageMap[selectedLanguage]){
+      audio.lang = languageMap[selectedLanguage];
+     }else{
+      audio.lang = "en-US";
+     }
     window.speechSynthesis.speak(audio);
   };
 
